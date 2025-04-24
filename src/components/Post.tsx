@@ -74,15 +74,16 @@ const Post = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
   {posts.map((post, index) => (
-    <Card key={index} className="overflow-hidden relative group h-64">
+    <Card key={index} className="overflow-hidden relative group sm:h-75 h:50">
  
       <div
         className="absolute inset-0 bg-cover bg-center opacity-90 group-hover:opacity-70 transition-all duration-300"
         style={{ backgroundImage: `url(${post.bgImage})` }}
       />
       <div className="absolute top-2 right-2 z-20 flex gap-2">
-        <Button className="w-7 h-7 p-0 text-midnight bg-white hover:bg-midnight hover:text-white">
-          <Eye className="w-4 h-4 " />
+        <Button className="w-12 h-7 p-1 text-midnight bg-white hover:bg-midnight hover:text-white">
+          <Eye className="w-2 h-2 p-0" />
+          <div className="text-[12px]">428</div>
         </Button>
         <Button className="w-7 h-7 p-0 text-midnight bg-white hover:bg-midnight hover:text-white">
           <ChartNoAxesCombined className="w-4 h-4" />
@@ -90,22 +91,22 @@ const Post = () => {
       </div>
 
 
-      <div className="relative z-10 h-full flex flex-col justify-between p-4 text-white">
+      <div className="relative z-10 h-full flex flex-col justify-between px-4 pt-2 pb-0 text-white">
   
-        <div>
-          <CardTitle className="text-lg font-semibold">{post.title}</CardTitle>
-        </div>
+<div className="w-full flex items-end mt-30 ">
+      <CardTitle className="text-md font-semibold">{post.title}</CardTitle>
 
-        
-        <div className="w-full flex justify-between items-end mt-auto">
+</div>
+
+        <div className="w-full flex justify-between items-end">
       
-          <div className="flex flex-col">
+          <div className="flex flex-col mt-2">
             <div className="flex-row">
             <span className="text-xs text-gray-200 mx-1 mb-1 font-semibold">{post.field}</span>
             <span className="text-xs text-gray-200 mb-1">{post.date}</span>
             </div>
           
-            <Button className="bg-cardbg text-midnight hover:bg-gray-400 px-4 py-1 w-24">
+            <Button className="bg-cardbg text-midnight hover:bg-gray-400 px-2 py-1 w-25">
               View
             </Button>
           </div>

@@ -6,6 +6,7 @@ import Post from "@/components/Post";
 export default function Home() {
   return (
     <>
+    <div className="p-2">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2 px-4">
         <Search />
         <Navbar />
@@ -32,6 +33,8 @@ export default function Home() {
       </div>
 
       <Post />
+      </div>
+      
     </>
   );
 }
