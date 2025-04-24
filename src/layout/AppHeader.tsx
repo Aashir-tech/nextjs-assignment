@@ -3,8 +3,6 @@
 // import NotificationDropdown from "@/components/header/NotificationDropdown";
 import UserDropdown from "@/components/header/UserDropdown";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 const AppHeader: React.FC = () => {

@@ -1,10 +1,6 @@
 import React from "react";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
+  Card
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "./ui/button";

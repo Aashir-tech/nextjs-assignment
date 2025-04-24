@@ -1,8 +1,7 @@
 import {
-  Calendar,
+
   Home,
-  Inbox,
-  Search,
+
   Settings,
   FileText,
   SquareUserRound,
@@ -23,7 +22,6 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
