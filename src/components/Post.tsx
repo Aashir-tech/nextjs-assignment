@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Card
+  Card,
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "./ui/button";
