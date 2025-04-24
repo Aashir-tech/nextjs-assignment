@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import AppHeader from "@/layout/AppHeader";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const urbanist = Urbanist({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-urbanist",
+  weight: ["400"], // Adjust weights as needed
 });
 
 export const metadata: Metadata = {
@@ -23,11 +23,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={urbanist.className}>
+      <body>
+        <SidebarProvider>
+          <AppSidebar />
+          <main className="w-full relative flex flex-col">
+            {/* <SidebarTrigger /> */}
+            
+              <AppHeader />
+            
+                {children}
+          </main>
+        </SidebarProvider>
       </body>
     </html>
   );
